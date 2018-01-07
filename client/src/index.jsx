@@ -100,7 +100,7 @@ class App extends React.Component {
     });
   }
 
-  authenticate(){
+  isAuthenticated(){
     return true;
   }
 
@@ -123,7 +123,7 @@ class App extends React.Component {
             />
           )}/> 
           <Route exact path="/submit" render={(props) => (
-            this.authenticate() === true
+            this.isAuthenticated() === true
             ? <Submit {...props} 
               submit={this.postEntry.bind(this)}
               titleChange={this.titleChange.bind(this)}
